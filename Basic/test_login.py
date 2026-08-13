@@ -1,3 +1,4 @@
+import allure
 from telnetlib import EC
 
 from selenium import webdriver
