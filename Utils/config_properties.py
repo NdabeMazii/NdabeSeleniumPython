@@ -13,3 +13,9 @@ class ReadConfig_CommonDetails():
 
     def getPassword(self):
         return config.get("Login Details", "password")
+
+    def getInvalidUsername(self):
+        return config.get("Login Invalid Details", "username")
+
+    def getInvalidPassword(self):
+        return config.get("Login Invalid Details", "password")
