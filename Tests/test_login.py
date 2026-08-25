@@ -1,3 +1,4 @@
+import allure
 import pytest
 from selenium.webdriver.common import driver_finder
 
@@ -30,6 +31,7 @@ class TestLogin:
         login.getUsername(self.username)
         login.getPassword(self.password)
         login.clickLoginButton()
+        allure.attach(self.driver.get_screenshot_as_png(), name="Login positive", attachment_type=allure.attachment_type.PNG)
 
 
 
