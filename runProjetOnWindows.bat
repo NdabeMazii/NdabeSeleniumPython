@@ -1,0 +1,3 @@
+pytest -s -v -m"sanity" --alluredir="allure-results" --browser chrome
+
+
