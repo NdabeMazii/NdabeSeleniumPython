@@ -9,4 +9,4 @@ def login(driver, username, password):
     homeP.click_main_login_button()
     loginP.getUsername(username)
     loginP.getPassword(password)
-    loginP.getLoginButton()
+    loginP.clickLoginButton()
