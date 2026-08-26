@@ -1,0 +1,8 @@
+name: Python application
+
+# Run this workflow when code is pushed to main or a PR targets main.
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
