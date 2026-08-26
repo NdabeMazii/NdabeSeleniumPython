@@ -52,3 +52,4 @@ jobs:
       # Ensure the allure output folder exists before test execution.
       - name: Prepare report directory
         run: mkdir -p allure-results
+
