@@ -56,3 +56,15 @@ jobs:
       # Run pytest and write raw allure results into allure-results/.
       - name: Test with pytest
         run: pytest --alluredir=allure-results
+
+      # Upload Allure results even if tests fail so reports are still available
+      - name: Upload Allure results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          # Artifact name shown is the GitHub Actions run summary.
+          name: allure-results
+          # Folder containing raw allure JSON files and attachments
+          path: allure-results/
+          # Warn (do not fail) if no files were produced
+          if-no-files-found: warn
