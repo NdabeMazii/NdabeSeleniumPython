@@ -6,3 +6,13 @@ on:
     branches: ["main"]
   pull_request:
     branches: ["main"]
+
+# Restrict default token permissions to read-only repository content.
+permissions:
+  contents: read
+
+jobs:
+  # single CI job: install tools, run lint/tests, and publish test artifacts.
+  build:
+    # Use GitHub-hosted Ubuntu runner.
+    runs-on: ubuntu-latest
