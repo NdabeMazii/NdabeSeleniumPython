@@ -16,3 +16,7 @@ jobs:
   build:
     # Use GitHub-hosted Ubuntu runner.
     runs-on: ubuntu-latest
+
+    steps:
+      # Download repository source code into the runner workspace
+      - uses: actions/checkout@v4
