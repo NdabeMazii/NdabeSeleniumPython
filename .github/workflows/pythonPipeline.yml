@@ -38,3 +38,7 @@ jobs:
         uses: browser-actions/setup-chrome@v1
         with:
           chrome-version: stable
+
+      # Print installed Chrome version for troubleshooting in CI logs
+      - name: Verify Chrome
+        run: google-chrome --version
