@@ -53,3 +53,6 @@ jobs:
       - name: Prepare report directory
         run: mkdir -p allure-results
 
+      # Run pytest and write raw allure results into allure-results/.
+      - name: Test with pytest
+        run: pytest --alluredir=allure-results
